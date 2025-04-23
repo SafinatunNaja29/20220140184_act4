@@ -47,3 +47,17 @@ class _RegisterpageState extends State<Registerpage> {
                   return null;
                 },
               ),
+              ElevatedButton(onPressed: () {}, child: Text('Register')),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login')
+                },
+                child: Text('Sudah punya akun? Login Sekarang!'),
+              ),
+            ],
+          ),
+        ),   
+      ),       
+    );    
+  }
+}   
