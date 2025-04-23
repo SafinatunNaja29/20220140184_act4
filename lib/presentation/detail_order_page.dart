@@ -30,3 +30,21 @@ class DetailOrderPage extends StatelessWidget {
             Text('Food  QYT Order: $jumlahMakanan'),
             Text('Drink QYT Order: $jumlahMinuman'),
             Text('Total Price: $totalHarga'),
+
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                  (route) => false,
+                );
+              },
+              child: Text('Finish Order'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
