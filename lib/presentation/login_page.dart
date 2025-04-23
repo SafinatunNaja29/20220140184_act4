@@ -51,11 +51,11 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
               ElevatedButton(
-                onPressed: () { 
+                onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => const Homepage()),
                     );
                   }
                 },
@@ -65,10 +65,10 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: context) => RegisterPage()),
+                    MaterialPageRoute(builder: (context) => Registerpage()),
                   );
                 },
-                child: Text('Belum punya akun? Daftar'),
+                child: Text('Belum punya akun ? Daftar Sekarang !'),
               ),
             ],
           ),
