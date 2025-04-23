@@ -61,11 +61,19 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 child: Text('Login'),
               ),
-              
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: context) => RegisterPage()),
+                  );
+                },
+                child: Text('Belum punya akun? Daftar'),
+              ),
             ],
-          )
+          ),
         ),
       ),
-    )
+    );
   }
 }
