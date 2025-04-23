@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_routing_parsing/navigation/detailpage.dart';
+import 'package:navigation/presentation/detail_order_page.dart';
 
 class Orderpage extends StatefulWidget {
   const Orderpage({super.key});
@@ -82,7 +82,7 @@ class _OrderpageState extends State<Orderpage> {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => DetaiOrderPage(
+                          (context) => DetailOrderPage(
                             makanan: makananController.text,
                             jumlahMakanan: jumlahMakananController.text,
                             minunan: minumanController.text,
