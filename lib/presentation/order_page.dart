@@ -14,3 +14,12 @@ class _OrderpageState extends State<Orderpage> {
   final TextEditingController jumlahMakananController = TextEditingController();
   final TextEditingController jumlahMinumanController = TextEditingController();
   int totalHarga = 0;
+
+  void calculateTotalPrice() {
+    int jumlahMakanan = int.tryParse(jumlahMakananController.text) ?? 0;
+    int jumlahMinuman = int.tryParse(jumlahMinumanController.text) ?? 0;
+
+    setState(() {
+      totalHarga = (jumlahMinuman * 4000) + (jumlahMakanan * 18000);
+    });
+  }
