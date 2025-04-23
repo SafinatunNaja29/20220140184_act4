@@ -15,11 +15,12 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(title: Text('Home Page')),
       body: Center(
         child: Column(
-          spacing: 8,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Selamat Datang di Home Page!'),
-            ElevatedButton(onPressed: () {
+            SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Orderpage()),

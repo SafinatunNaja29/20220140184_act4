@@ -24,7 +24,7 @@ class _OrderpageState extends State<Orderpage> {
     });
   }
 
-    @override
+   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
@@ -32,7 +32,6 @@ class _OrderpageState extends State<Orderpage> {
       body: Form(
         key: _formKey,
         child: Column(
-          spacing: 16,
           children: [
             TextFormField(
               controller: makananController,
@@ -44,6 +43,7 @@ class _OrderpageState extends State<Orderpage> {
                 return null;
               },
             ),
+            SizedBox(height: 16),
             TextFormField(
               controller: jumlahMakananController,
               decoration: const InputDecoration(labelText: 'Food QTY Order'),
@@ -54,6 +54,7 @@ class _OrderpageState extends State<Orderpage> {
                 return null;
               },
             ),
+            SizedBox(height: 16),
             TextFormField(
               controller: minumanController,
               decoration: const InputDecoration(labelText: 'Drink Order'),
@@ -64,6 +65,7 @@ class _OrderpageState extends State<Orderpage> {
                 return null;
               },
             ),
+            SizedBox(height: 16),
             TextFormField(
               controller: jumlahMinumanController,
               decoration: const InputDecoration(labelText: 'Drink QTY Order'),
@@ -74,6 +76,7 @@ class _OrderpageState extends State<Orderpage> {
                 return null;
               },
             ),
+            SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
@@ -81,14 +84,13 @@ class _OrderpageState extends State<Orderpage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder:
-                          (context) => DetailOrderPage(
-                            makanan: makananController.text,
-                            jumlahMakanan: jumlahMakananController.text,
-                            minunan: minumanController.text,
-                            jumlahMinuman: jumlahMinumanController.text,
-                            totalHarga: totalHarga,
-                          ),
+                      builder: (context) => DetailOrderPage(
+                        makanan: makananController.text,
+                        jumlahMakanan: jumlahMakananController.text,
+                        minuman: minumanController.text,
+                        jumlahMinuman: jumlahMinumanController.text,
+                        totalHarga: totalHarga,
+                      ),
                     ),
                   );
                 }
